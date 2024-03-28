@@ -1,0 +1,67 @@
+@font-face {
+    font-family: 'Valorant';
+    src: url("../fonts/Valorant_Font.woff") format("woff");
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0px 30px rgba(255, 255, 255, 0.768);
+    }
+
+    50% {
+        box-shadow: 0 0px 10px rgba(255, 255, 255, 0.768);
+    }
+
+    
+    100% {
+        box-shadow: 0 0px 30px rgba(255, 255, 255, 0.768);
+    }
+}
+
+body {
+    font-family: 'Valorant', sans-serif;
+}
+
+.mobile {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3vh;
+}
+
+#valoImg {
+    width: min(50vh, 50vw);
+    margin-top: -5vh;
+}
+
+.randomButton {
+    font-size: min(4.5vh, 4.5vw);
+    background-color: #FF4655;
+    padding: 1vh 1.5vw 0.4vh;
+    border-radius: 5vw;
+    /* box-shadow: 0 0px 20px rgba(255, 255, 255, 0.768); */
+
+    animation-name: glow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.randomButton:hover {
+    cursor: pointer;
+    filter: brightness(80%);
+}
+
+.mobile > h3 {
+    color: white;
+    font-family: sans-serif;
+    font-weight: 1000;
+    font-size: 1.2vh;
+    position: fixed;
+    bottom: 2vh;
+}
