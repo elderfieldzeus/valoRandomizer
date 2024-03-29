@@ -1,8 +1,32 @@
 class Agent {
     constructor (name) {
         this.name = name;
-        this.icon = `${name}_icon.webp`;
-        this.banner = `...`;
+        this.icon = document.createElement("img");
+        this.iconBox = document.createElement("div");
+        this.iconFilter = document.createElement("div");
+        this.banner = document.createElement("img");
+        this.status = true;
+
+
+        this.iconBox.appendChild(this.iconFilter);
+        this.iconBox.appendChild(this.icon);
+
+
+        this.icon.src = `../assets/images/icons/${name}_icon.webp`;
+        // this.banner.src = `../assets/images/banners/${name}_banner.webp`;
+
+        this.iconBox.className = "iconBox";
+        this.iconFilter.className = "iconFilter"
+
+        this.iconBox.addEventListener("click", () => {
+            this.status = !this.status;
+            if(this.iconBox.classList.contains("exempted")) {
+                this.iconBox.classList.remove("exempted");
+            }
+            else {
+                this.iconBox.classList.add("exempted");
+            }
+        });
     }
 }
 
@@ -23,9 +47,6 @@ roles.forEach((role) => {
     //improve this
 });
 
-const agents = roles.flat();
-sortAgents(agents);
-
 function sortAgents(agents) {
     for(let i = 0; i < agents.length; i++) {
         for(let j = 0; j < agents.length - i - 1; j++) {
@@ -42,10 +63,13 @@ function displayAgents() {
     const iconContainer = document.querySelector(".icons");
 
     agents.forEach((agent) => {
-        const icon = document.createElement("img");
-        icon.src = `../assets/images/icons/${agent.icon}`;
-        iconContainer.appendChild(icon);
+        iconContainer.appendChild(agent.iconBox);
     });
 }
 
+
+const agents = roles.flat();
+sortAgents(agents);
+
+console.log(agents);
 displayAgents();

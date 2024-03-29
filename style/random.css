@@ -51,19 +51,57 @@ nav {
 main {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .icons {
     display: grid;
-    grid-template-columns: repeat(8, auto);
+    grid-template-columns: repeat(8, min(10vh, 10vw));
+    grid-auto-rows: min(10vh, 10vw);
     justify-content: center;
     justify-content: center;
+    /* gap: 1px; */
 }
 
-.icons > img {
-    width: min(10vw, 10vh);
+.exempted {
+    /* outline: 1px solid rgb(255, 0, 0); */
+    background-color: red;
+}
+
+.iconBox {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.iconBox > img {
+    position: absolute;
+    width: min(10vh, 10vw);
+}
+
+.iconBox:hover {
+    cursor: pointer;
+    border: 2px solid white;
+}
+
+.iconFilter {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.iconFilter:hover {
+    background-color: rgba(0, 0, 0, 0.535);
+}
+
+.exempted > .iconFilter {
+    background-color: #ff465671;
 }
 
 footer {
