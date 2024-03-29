@@ -20,6 +20,11 @@ nav {
     padding: 3vh min(5vh, 5vw);
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
 .options {
     display: flex;
     align-items: center;
@@ -28,20 +33,20 @@ nav {
     font-size: 1rem;
 }
 
-.options > h1:hover {
+.options > a:hover {
     cursor: pointer;
     color: #FF4655;
     font-size: 1.2rem !important;
     transition: 500ms;
 }
 
-.options > h1 {
+.options > a {
     transition: 500ms;
 }
 
 .emphasized {
-    color: #FF4655;
-    font-size: 1rem !important;
+    color: #FF4655 !important;
+    font-size: 1rem;
 }
 
 #valoImg {
