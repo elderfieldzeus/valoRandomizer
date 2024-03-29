@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Valorant';
-    src: url("../fonts/Valorant_Font.woff") format("woff");
+    src: url("../assets/fonts/Valorant_Font.woff") format("woff");
 }
 
 @keyframes glow {
@@ -20,12 +20,12 @@
 
 body {
     font-family: 'Valorant', sans-serif;
+    background-color: black;
 }
 
-.mobile {
+main {
     height: 100vh;
     width: 100vw;
-    background-color: black;
     color: white;
 
     display: flex;
@@ -38,6 +38,11 @@ body {
 #valoImg {
     width: min(50vh, 50vw);
     margin-top: -5vh;
+}
+
+a {
+    text-decoration: none;
+    color: white;
 }
 
 .randomButton {
@@ -57,11 +62,13 @@ body {
     filter: brightness(80%);
 }
 
-.mobile > h3 {
+footer {
     color: white;
     font-family: sans-serif;
     font-weight: 1000;
     font-size: 1.2vh;
     position: fixed;
     bottom: 2vh;
+    left: 50%;
+    transform: translate(-50%, 0%);
 }

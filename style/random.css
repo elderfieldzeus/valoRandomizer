@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'Valorant';
+    src: url("../assets/fonts/Valorant_Font.woff") format("woff");
+}
+
+body {
+    background-color: black;
+    font-family: 'Valorant', sans-serif;
+    color: white;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100vw - calc(min(5vh, 5vw) * 2));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3vh min(5vh, 5vw);
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: min(10vw, 10vh);
+    font-size: 1rem;
+}
+
+.options > h1:hover {
+    cursor: pointer;
+    color: #FF4655;
+    font-size: 1.2rem !important;
+    transition: 500ms;
+}
+
+.options > h1 {
+    transition: 500ms;
+}
+
+.emphasized {
+    color: #FF4655;
+    font-size: 1rem !important;
+}
+
+#valoImg {
+    width: min(10vw, 10vh);
+}
+
+footer {
+    color: white;
+    font-family: sans-serif;
+    font-weight: 1000;
+    font-size: 1.2vh;
+    position: fixed;
+    bottom: 2vh;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
