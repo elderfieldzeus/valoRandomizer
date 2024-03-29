@@ -48,6 +48,24 @@ nav {
     width: min(10vw, 10vh);
 }
 
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons {
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    justify-content: center;
+    justify-content: center;
+}
+
+.icons > img {
+    width: min(10vw, 10vh);
+}
+
 footer {
     color: white;
     font-family: sans-serif;
